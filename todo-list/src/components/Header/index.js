@@ -1,9 +1,16 @@
 import React from 'react';
+import { AppBar, Toolbar, Typography } from '@material-ui/core';
 
 const Header = () => (
-  <header >
-    <h1>To-Do List</h1>
+  <header>
+    <AppBar position="static" color='inherit'>
+    <Toolbar variant='regular'>
+      <Typography variant="title" color='primary'>
+        To-Do List
+      </Typography>
+    </Toolbar>
+  </AppBar>
   </header>
 );
 
-export default Header;
+export default Header

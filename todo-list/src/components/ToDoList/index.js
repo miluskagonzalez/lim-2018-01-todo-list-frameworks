@@ -1,22 +1,24 @@
 import React from 'react';
+import { List } from '@material-ui/core'
+import { ListItem, ListItemText, Checkbox } from '@material-ui/core'
+
 
 const ToDoList = ({ todos, deleteTodo }) => (
-  <div>
+  <List>
     {
       todos.length
         ? (
           todos.map(({ id, content }) => (
-            <div key={ id }>
-              <p>{ content }</p>
-              <button onClick={ () => deleteTodo(id) }>Borrar</button>
-            </div>
+            <ListItem key={id}>
+              <ListItemText>{content}</ListItemText>
+              <Checkbox />
+              <button onClick={() => deleteTodo(id)}>Borrar</button>
+            </ListItem>
           ))
-        )
-        : (
-          <p>No hay tareas</p>
-        )
+        ) 
+        : <p>No hay tareas!</p>
     }
-  </div>
+  </List>
 );
 
 export default ToDoList
