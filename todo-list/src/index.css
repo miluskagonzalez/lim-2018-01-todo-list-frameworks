@@ -1,5 +1,12 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+}
+
+.crossed {
+  text-decoration-line: line-through;
+}
+
+.uncrossed {
+  text-decoration-line: none;
 }
